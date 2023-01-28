@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex, nofollow">
+        <title>Test VbFormJS</title>
+
+        <link rel="stylesheet" type="text/css" media="all" href="https://static.entrepairs.fr/css/concat.min.css" />
+
+        <script src="json_fields.js"></script>
+        <script src="../vbfields.js"></script>
+        <script src="../vbmultifields.js"></script>
+        <script src="../vbform.js"></script>
+        <script src="../lib/vbtests.js"></script>
+
+        <script src="fields/numberfield.js"></script>
+        <script src="fields/charfield.js"></script>
+        <script src="fields/passwordfield.js"></script>
+        <script src="fields/telfield.js"></script>
+        <script src="fields/emailfield.js"></script>
+        <script src="fields/urlfield.js"></script>
+        <script src="fields/textfield.js"></script>
+        <script src="fields/selectfield.js"></script>
+        <script src="fields/checkboxfield.js"></script>
+        <script src="fields/radiofield.js"></script>
+        <script src="fields/datefield.js"></script>
+        <script src="fields/timefield.js"></script>
+        <script src="fields/rangefield.js"></script>
+        <script src="fields/colorfield.js"></script>
+        <script src="fields/filefield.js"></script>
+        <script src="fields/jsonfield.js"></script>
+        <script src="./form.js"></script>
+
+        <script src="tests.js"></script>
+
+        <style>
+            body {text-align: center;}
+            section {display: inline-block; text-align: left; padding: 20px;}
+            .vb_detailtests td {padding: 2px 5px;}
+            .vb_detailtests th {text-align: center;}
+            .vb_reporttests {padding: 20px; border: 1px black dashed;}
+            .vb_reporttests > span:nth-child(3) {color: green;}
+            .vb_reporttests > span:nth-child(5) {color: orange;}
+            .vb_reporttests > span:nth-child(7) {color: red;}
+
+            section .vb_Success::before {content: "🟩"; margin-right: 1rem;}
+            section .vb_Fail::before {content: "🟧"; margin-right: 1rem;}
+            section .vb_Error::before {content: "🟥"; margin-right: 1rem;}
+        </style>
+    </head>
+    <body>
+        <section>
+            <h1>VbTests</h1>
+            <p>Unit Tests for frontend libs JS</p>
+            <script>
+                let tests = new TestsRunner();
+                tests.addAllTests(all_tests);
+                tests.getHTMLResults();
+            </script>
+        </section>
+    </body>
+</html>
+
